@@ -15,18 +15,38 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UTu-HE-T02">
-                                <rect key="frame" x="183" y="508" width="49" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lights Off" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ebR-Fa-hER">
+                                <rect key="frame" x="143.5" y="430" width="127.5" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JH0-an-3V8">
+                                <rect key="frame" x="131" y="563" width="152" height="150"/>
+                                <state key="normal" image="btn"/>
+                                <connections>
+                                    <action selector="lightSwitchBtnClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GAV-HM-lcg"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ebR-Fa-hER" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="7wF-x2-bxa"/>
+                            <constraint firstItem="JH0-an-3V8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MZB-fJ-Is6"/>
+                            <constraint firstItem="ebR-Fa-hER" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vtm-73-E2c"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="lightSwitchLbl" destination="ebR-Fa-hER" id="3c0-2h-E6v"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="139" y="117"/>
+            <point key="canvasLocation" x="17" y="-59"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="btn" width="152" height="150"/>
+    </resources>
 </document>
