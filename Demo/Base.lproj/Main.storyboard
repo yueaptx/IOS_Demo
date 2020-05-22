@@ -10,73 +10,43 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Demo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="LLan" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="p1V-Hz-ETQ">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LLan_background" translatesAutoresizingMaskIntoConstraints="NO" id="p1V-Hz-ETQ">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lights Off" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ebR-Fa-hER">
-                                <rect key="frame" x="143.5" y="59" width="127.5" height="36"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LzP-ir-nM8">
+                                <rect key="frame" x="190.5" y="789" width="33" height="33"/>
+                                <state key="normal" image="heart_outline"/>
+                                <connections>
+                                    <action selector="LLanFightBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="h8N-hl-wfI"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="兰兰加油www" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Vh-On-3hX">
+                                <rect key="frame" x="116.5" y="84" width="181" height="35"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JH0-an-3V8" userLabel="Light Switch">
-                                <rect key="frame" x="131" y="670.5" width="152" height="150"/>
-                                <state key="normal" image="btn"/>
-                                <connections>
-                                    <action selector="lightSwitchBtnClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GAV-HM-lcg"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AHQ-XS-Gh9">
-                                <rect key="frame" x="64.5" y="413.5" width="285" height="69"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <inset key="contentEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                <state key="normal" title="Sign in with Facebook" backgroundImage="FB">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ML-Nu-SZU">
-                                <rect key="frame" x="64.5" y="492.5" width="285" height="69"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <inset key="contentEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                <state key="normal" title="Sign in with Google" backgroundImage="Google">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j8s-Ya-gz3">
-                                <rect key="frame" x="64.5" y="571.5" width="285" height="69"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <inset key="contentEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                <state key="normal" title="Sign in with Email" backgroundImage="Email">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="LzP-ir-nM8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5Vb-qf-3vq"/>
                             <constraint firstAttribute="trailing" secondItem="p1V-Hz-ETQ" secondAttribute="trailing" id="6wD-SU-o4r"/>
                             <constraint firstAttribute="bottom" secondItem="p1V-Hz-ETQ" secondAttribute="bottom" id="7Gi-dE-Adf"/>
-                            <constraint firstItem="j8s-Ya-gz3" firstAttribute="top" secondItem="1ML-Nu-SZU" secondAttribute="bottom" constant="10" id="8Sm-Sy-4lm"/>
-                            <constraint firstItem="j8s-Ya-gz3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="CQD-lR-6zP"/>
-                            <constraint firstItem="1ML-Nu-SZU" firstAttribute="top" secondItem="AHQ-XS-Gh9" secondAttribute="bottom" constant="10" id="GSg-QC-Ix6"/>
-                            <constraint firstItem="JH0-an-3V8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MZB-fJ-Is6"/>
-                            <constraint firstItem="AHQ-XS-Gh9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ssa-GZ-Bhx"/>
+                            <constraint firstItem="8Vh-On-3hX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="9Rt-xj-bPO"/>
                             <constraint firstItem="p1V-Hz-ETQ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Xgp-sE-xwh"/>
-                            <constraint firstItem="1ML-Nu-SZU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ash-Xf-0mY"/>
-                            <constraint firstItem="AHQ-XS-Gh9" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="d2x-r1-PRh"/>
-                            <constraint firstItem="JH0-an-3V8" firstAttribute="top" secondItem="j8s-Ya-gz3" secondAttribute="bottom" constant="30" id="fCf-LP-f99"/>
                             <constraint firstItem="p1V-Hz-ETQ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="gyc-N4-xB9"/>
-                            <constraint firstItem="ebR-Fa-hER" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="15" id="o6u-AA-lOh"/>
-                            <constraint firstItem="ebR-Fa-hER" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vtm-73-E2c"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="LzP-ir-nM8" secondAttribute="bottom" constant="40" id="rNu-Ba-NK2"/>
+                            <constraint firstItem="8Vh-On-3hX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="w6H-AM-mSV"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="lightSwitchLbl" destination="ebR-Fa-hER" id="3c0-2h-E6v"/>
+                        <outlet property="LLanFightLbl" destination="8Vh-On-3hX" id="Gqq-9A-Kpa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -85,10 +55,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Background" width="414" height="896"/>
-        <image name="Email" width="285" height="69"/>
-        <image name="FB" width="285" height="69"/>
-        <image name="Google" width="285" height="69"/>
-        <image name="btn" width="152" height="150"/>
+        <image name="LLan_background" width="1110" height="1080"/>
+        <image name="heart_outline" width="33" height="33"/>
     </resources>
 </document>
